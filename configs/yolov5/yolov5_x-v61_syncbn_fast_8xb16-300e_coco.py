@@ -14,3 +14,5 @@ model = dict(
         widen_factor=widen_factor,
     ),
     bbox_head=dict(head_module=dict(widen_factor=widen_factor)))
+
+train_cfg=dict(max_epochs = 12)  # Maximum training epochs
