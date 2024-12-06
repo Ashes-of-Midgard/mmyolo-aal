@@ -17,4 +17,7 @@ model = dict(
     ),
     bbox_head=dict(head_module=dict(widen_factor=widen_factor)))
 
-train_cfg=dict(max_epochs = 12)  # Maximum training epochs
+default_hooks = dict(checkpoint=dict(interval=1))
+
+train_cfg=dict(max_epochs = 12,
+               val_interval=1)  # Maximum training epochs
